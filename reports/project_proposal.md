@@ -1,0 +1,19 @@
+# Ising Model Experiment
+Henry Rachootin
+
+The Ising model is a model of magnetization in metals, and has several interesting features that make it a valuable tool for physicists. It models the metal as cellular automaton on a grid lattice of spin states. I intend to build an Ising model in python, and demonstrate that despite being a reversible automaton, it displays constantly increasing entropy, much like the real world. This seeming contradiction, that a reversible system can have irreversible large scale behavior, is shown to not be a contradiction, which is good news, since that’s what modern physics believes. This will experimentally replicate the analytical result from [1]. If time permits, there are several other real world features that can be shown with the Ising model, including magnetic annealing and the Curie temperature phase transition, as shown in [2].
+
+The results of this experiment will be a graph of entropy over time, with entropy measured as the sum of the entropy of the probability distribution of each cell, as described in [1]. If the entropy increases over time, then the experiment will conclude that physics makes sense, but if it does not, then this will not mean physics is wrong, just that the model does not capture whatever causes the real world to have constantly increasing entropy. 
+
+My main cause for concern here is that this model is not very explanatory; it does not include or exclude features from the model to explain why entropy increases over time in a time reversible system. However, this concern is also a next step: I could remove things from the model to attempt to find some explanatory value.
+
+My first move will be to implement the model in python.
+
+
+[1] Lindgren, K. & Olbrich, E. J. The Approach Towards Equilibrium in a Reversible Ising Dynamics Model: An Information-Theoretic Analysis Based on an Exact Solution. Stat Phys (2017) 168: 919. https://doi.org/10.1007/s10955-017-1833-8 
+
+This paper studies an Ising model of magnetic particles in a lattice, which in this case is one dimensional. This isn’t so much an experiment to explain, but a physical phenomenon. The investigate how the system gets to equilibrium from a low entropy state with magnetization (the spins align). They use a dynamic Ising model, called the Q2R cellular automaton: an infinite line of cells which are either up or down. Every other cell is updated on each tick (evens, then odds, the evens, and so on), and in an update the spin flips if doing so does not change the energy. The energy of a cell is given by comparing it to its neighbors: each matching neighbor is +1 energy, and each mismatched neighbor is -1 energy. This model attempts to explain how a microscopically reversible process (which this is, since the rule is reversible) can approach thermodynamic equilibrium in an irreversible way. They use statistical analysis, not simulation to analyze the model. They find and prove a formula for the magnetization over time, and find how the entropy and entropy densities evolve towards equilibrium, and how correlations evolve when the states are probability distributions instead of definite values. The validation here is that this is how the universe works as far as we know: it is reversible at small scales but irreversible at large scales, and this paper proves that such a behavior makes sense in a simplified model.
+
+[2] http://farside.ph.utexas.edu/teaching/329/lectures/node110.html 
+
+This website outlines several basic properties of the Ising model, including how it demonstrates basic properties of ferromagnetic metals. They show how net magnetization goes through a phase transition at the Curie temperature, how the total energy and heat capacity change with temperature, and how the presence of a magnetic field affects a ferromagnet.
