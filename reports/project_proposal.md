@@ -1,4 +1,4 @@
-# Ising Model Experiment
+# Ising Model Project Proposal
 Henry Rachootin
 
 The Ising model is a model of magnetization in metals, and has several interesting features that make it a valuable tool for physicists. It models the metal as cellular automaton on a grid lattice of spin states. I intend to build an Ising model in python, and demonstrate that despite being a reversible automaton, it displays constantly increasing entropy, much like the real world. This seeming contradiction, that a reversible system can have irreversible large scale behavior, is shown to not be a contradiction, which is good news, since that’s what modern physics believes. This will experimentally replicate the analytical result from [1]. If time permits, there are several other real world features that can be shown with the Ising model, including magnetic annealing and the Curie temperature phase transition, as shown in [2].
