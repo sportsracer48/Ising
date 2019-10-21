@@ -19,10 +19,10 @@ However, a different story emerges when we look at the actual graphs of the prob
 ![](https://raw.githubusercontent.com/sportsracer48/Ising/master/code/p_0%3D.4.png)
 ![](https://raw.githubusercontent.com/sportsracer48/Ising/master/code/p_0%3D.5.png)
 
-It looks like the probability varies much over time for initial conditions with low initial entropy (starting vary biased towards down) while always hovering around 0.5. Indeed, when we graph the variance of the probability over time, we get a beautiful power law relationship:
+It looks like the probability varies more over time for initial conditions with low initial entropy (starting strongly biased towards down) while always hovering around 0.5. Indeed, when we graph the variance of the probability over time, we get a beautiful power law relationship:
 
 ![](https://github.com/sportsracer48/Ising/blob/master/code/outSigma.png)
 
-This is _not_ what we would expect from the real world. In reality two systems which start with different entropy will approach the same equilibrium _and_ hover around it with the same variance, if they have the same temperature. In this model it is as if initial entropy and temperature are coupled, and there is no way to uncouple them. This casts some doubt on the explanatory value of the model.
+This is _not_ what we would expect from the real world. In reality two systems which start with different entropy will approach the same equilibrium _and_ hover around it with the same variance, if they have the same temperature. In this model it is as if initial entropy and temperature are coupled, and there is no way to uncouple them. This casts some doubt on the explanatory value of the model, since it fails to capture the fact that entropy and temperature are not totally coupled.
 
 [1] Lindgren, K. & Olbrich, E. J. The Approach Towards Equilibrium in a Reversible Ising Dynamics Model: An Information-Theoretic Analysis Based on an Exact Solution. Stat Phys (2017) 168: 919. https://doi.org/10.1007/s10955-017-1833-8 
